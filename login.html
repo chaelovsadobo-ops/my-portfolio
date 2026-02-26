@@ -1,0 +1,365 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Login Form</title>
+
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+	  <style>
+		* {
+		  box-sizing: border-box;
+		  font-family: 'Poppins', sans-serif;
+		}
+
+		body {
+		  margin: 0;
+		  height: 100vh;
+		  background: linear-gradient(135deg, #5ee7df, #b490ca, #ff5edf);
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+
+		.login-card {
+		  background: #fff;
+		  width: 360px;
+		  padding: 40px 30px;
+		  border-radius: 12px;
+		  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+		  text-align: center;
+		}
+
+		.login-card h2 {
+		  margin-bottom: 30px;
+		  font-weight: 600;
+		}
+
+		.input-group {
+		  text-align: left;
+		  margin-bottom: 20px;
+		}
+
+		.input-group label {
+		  font-size: 13px;
+		  color: #666;
+		}
+
+		.input-group input {
+		  width: 100%;
+		  border: none;
+		  border-bottom: 1px solid #ccc;
+		  padding: 10px 5px;
+		  font-size: 14px;
+		  outline: none;
+		}
+
+		.forgot {
+		  text-align: right;
+		  font-size: 12px;
+		  margin-bottom: 25px;
+		}
+
+		.forgot a {
+		  color: #888;
+		  text-decoration: none;
+		}
+
+		.login-btn {
+		  width: 100%;
+		  padding: 12px;
+		  border: none;
+		  border-radius: 30px;
+		  background: linear-gradient(to right, #5ee7df, #ff5edf);
+		  color: white;
+		  font-weight: 600;
+		  cursor: pointer;
+		  margin-bottom: 25px;
+		}
+
+		.divider {
+		  font-size: 13px;
+		  color: #999;
+		  margin-bottom: 15px;
+		}
+
+		.socials {
+		  display: flex;
+		  justify-content: center;
+		  gap: 15px;
+		  margin-bottom: 25px;
+		}
+
+		.socials div {
+		  width: 40px;
+		  height: 40px;
+		  border-radius: 50%;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  color: #fff;
+		  font-weight: bold;
+		  cursor: pointer;
+		}
+
+		.facebook { background: #3b5998; }
+		.twitter { background: #1da1f2; }
+		.google { background: #db4437; }
+
+		.signup {
+		  font-size: 13px;
+		}
+
+		.signup a {
+		  text-decoration: none;
+		  font-weight: 600;
+		  color: #ff5edf;
+		  cursor: pointer;
+		}
+
+		.switch-link {
+		  font-size: 13px;
+		  color: #666;
+		  margin-top: 10px;
+		}
+
+		.switch-link a {
+		  color: #ff5edf;
+		  text-decoration: none;
+		  font-weight: 600;
+		  cursor: pointer;
+		}
+
+		.hidden {
+		  display: none;
+		}
+
+		.menu {
+		  background: #fff;
+		  width: 400px;
+		  padding: 40px 30px;
+		  border-radius: 12px;
+		  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+		  text-align: center;
+		}
+
+		.menu h2 {
+		  margin-bottom: 30px;
+		  font-weight: 600;
+		}
+
+		.menu-item {
+		  margin-bottom: 15px;
+		}
+
+		.menu-item button {
+		  width: 100%;
+		  padding: 12px;
+		  border: none;
+		  border-radius: 30px;
+		  background: linear-gradient(to right, #5ee7df, #ff5edf);
+		  color: white;
+		  font-weight: 600;
+		  cursor: pointer;
+		}
+
+		.logout-btn {
+		  background: #ff5edf;
+		}
+	  </style>
+	</head>
+	<body>
+
+	  <div id="authContainer">
+		<div class="login-card">
+		  <div id="loginSection">
+			<h2>Login</h2>
+
+			<form id="loginForm">
+			  <div class="input-group">
+				<label>Username</label>
+				<input type="text" id="loginUsername"="alexander" required>
+			  </div>
+
+			  <div class="input-group">
+				<label>Password</label>
+				<input type="password" id="loginPassword"="123" required>
+			  </div
+
+			  <div class="forgot">
+				<a href="#">Forgot password?</a>
+			  </div>
+
+			  <button class="login-btn" type="submit">LOGIN</button>
+			</form>
+
+			<div class="divider">Or Sign Up Using</div>
+
+			<div class="socials">
+			  <div class="facebook">f</div>
+			  <div class="twitter">t</div>
+			  <div class="google">G</div>
+			</div>
+
+			<div class="signup">
+			  Or Sign Up Using <br><br>
+			  <a id="switchToSignup">SIGN UP</a>
+			</div>
+		  </div>
+
+		  <div id="signupSection" class="hidden">
+			<h2>Sign Up</h2>
+
+			<form id="signupForm">
+			  <div class="input-group">
+				<label>Username</label>
+				<input type="text" id="signupUsername"="pendong" required>
+			  </div>
+
+			  <div class="input-group">
+				<label>Password</label>
+				<input type="password" id="signupPassword"="donpen" required>
+			  </div>
+
+			  <div class="input-group">
+				<label>Confirm Password</label>
+				<input type="password" id="confirmPassword"="donpen" required>
+			  </div>
+
+			  <button class="login-btn" type="submit">SIGN UP</button>
+			</form>
+
+			<div class="switch-link">
+			  Already have an account? <a id="switchToLogin">Login</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div id="menuContainer" class="hidden">
+		<div class="menu">
+		  <h2>Welcome to the Menu</h2>
+		  <p id="welcomeMessage"></p>
+		  <div class="menu-item">
+			<button onclick="alert('Profile clicked')"><a href="personal_album.html">Personal information</a></button>
+			<a href="personal_details.html">Login</a>
+		  </div>
+		  <div class="menu-item">
+			<button onclick="alert('Settings clicked')"><a href="family_background.html">Family information</a>	</button>
+		  </div>
+		  <div class="menu-item">
+			<button onclick="alert('Dashboard clicked')"><a href="collection_features.html">Collection</a></button>
+		  </div>
+		  <div class="menu-item">
+			<button class="logout-btn" onclick="logout()">Logout</button>
+		  </div>
+		</div>
+	  </div>
+
+	  <script>
+		let currentUser = null;
+
+		// Function to get users from localStorage
+		function getUsers() {
+		  const users = localStorage.getItem('users');
+		  return users ? JSON.parse(users) : {};
+		}
+
+		// Function to save users to localStorage
+		function saveUsers(users) {
+		  localStorage.setItem('users', JSON.stringify(users));
+		}
+
+		// Login form handler
+		document.getElementById("loginForm").addEventListener("submit", function(e) {
+		  e.preventDefault();
+
+		  const username = document.getElementById("loginUsername").value;
+		  const password = document.getElementById("loginPassword").value;
+
+		  if (username === "" || password === "") {
+			alert("Please fill in all fields");
+			return;
+		  }
+
+		  const users = getUsers();
+		  if (users[username] && users[username] === password) {
+			currentUser = username;
+			showMenu();
+		  } else {
+			alert("Invalid username or password");
+		  }
+		});
+
+		// Signup form handler
+		document.getElementById("signupForm").addEventListener("submit", function(e) {
+		  e.preventDefault();
+
+		  const username = document.getElementById("signupUsername").value;
+		  const password = document.getElementById("signupPassword").value;
+		  const confirmPassword = document.getElementById("confirmPassword").value;
+
+		  if (username === "" || password === "" || confirmPassword === "") {
+			alert("Please fill in all fields");
+			return;
+		  }
+
+		  if (password !== confirmPassword) {
+			alert("Passwords do not match");
+			return;
+		  }
+
+		  const users = getUsers();
+		  if (users[username]) {
+			alert("Username already exists");
+			return;
+		  }
+
+		  users[username] = password;
+		  saveUsers(users);
+		  alert("Account created successfully! You can now log in.");
+		  switchToLogin();
+		});
+
+		// Switch to signup
+		document.getElementById("switchToSignup").addEventListener("click", function(e) {
+		  e.preventDefault();
+		  switchToSignup();
+		});
+
+		// Switch to login
+		document.getElementById("switchToLogin").addEventListener("click", function(e) {
+		  e.preventDefault();
+		  switchToLogin();
+		});
+
+		function switchToSignup() {
+		  document.getElementById("loginSection").classList.add("hidden");
+		  document.getElementById("signupSection").classList.remove("hidden");
+		}
+
+		function switchToLogin() {
+		  document.getElementById("signupSection").classList.add("hidden");
+		  document.getElementById("loginSection").classList.remove("hidden");
+		}
+
+		function showMenu() {
+		  document.getElementById("authContainer").classList.add("hidden");
+		  document.getElementById("menuContainer").classList.remove("hidden");
+		  document.getElementById("welcomeMessage").textContent = "Hello, " + currentUser + "!";
+		}
+
+		function logout() {
+		  currentUser = null;
+		  document.getElementById("menuContainer").classList.add("hidden");
+		  document.getElementById("authContainer").classList.remove("hidden");
+		  // Clear form fields
+		  document.getElementById("loginUsername").value = "";
+		  document.getElementById("loginPassword").value = "";
+		}
+	  </script>
+
+	</body>
+	</html>
